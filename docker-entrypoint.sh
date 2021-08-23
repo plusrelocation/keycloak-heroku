@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Manual fix for path not found
+export JAVA_OPTS="$JAVA_OPTS -Duser.home=/opt/jboss"
+
 # Set database config from Heroku DATABASE_URL
 if [ "$DATABASE_URL" != "" ]; then
     echo "Found database configuration in DATABASE_URL=$DATABASE_URL"
